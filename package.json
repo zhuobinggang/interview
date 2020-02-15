@@ -1,0 +1,17 @@
+{
+  "name": "interview2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kobako",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "express": "^4.17.1",
+    "knex": "^0.20.9",
+    "sqlite3": "^4.1.1"
+  }
+}

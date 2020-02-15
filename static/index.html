@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+  </head>
+<body>
+
+  <h2>Now open resturants</h2>
+
+  <div>
+    <input name="time" placeholder="格式: 2020-02-15 22:00:00"/>
+    <button onclick="filterOpenAtTime()">搜索指定时段的营业餐厅</button>
+  </div>
+
+  <table id="t" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>周1</th>
+                <th>周2</th>
+                <th>周3</th>
+                <th>周4</th>
+                <th>周5</th>
+                <th>周6</th>
+                <th>周天</th>
+            </tr>
+        </thead>
+    </table>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
