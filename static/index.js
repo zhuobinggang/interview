@@ -2,7 +2,13 @@
 let all = null;
 let table = $('#t').DataTable();
 
-const nowOpens = (datas, now = new Date()) => {
+const nowOpens = (datas, now) => {
+  if(now == '' || now == null){
+    now = toTaibeiTime()
+    console.log('+++++++')
+  }else{
+    now = toTaibeiTime(now)
+  }
   const nowWeekday = (() => {
     switch(now.getDay()){
       case 1: return 'one'
@@ -38,6 +44,13 @@ const nowOpens = (datas, now = new Date()) => {
 
 function mapTolist(r){
   return [r.name, r.one,r.two, r.three, r.four, r.five, r.six, r.seven]
+}
+
+function toTaibeiTime(time = new Date()){
+  time = new Date(time);
+  var asiaTime = time.toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
+  console.log(asiaTime)
+  return new Date(asiaTime);
 }
 
 function resetTable(rows){
